@@ -33,7 +33,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['server-dev2.ap-south-1.elasticbeanstalk.com','172.31.17.162']
 
 
-SITE_ID = 19 # http://naresh.ap-south-1.elasticbeanstalk.com
+SITE_ID = 18 # http://naresh.ap-south-1.elasticbeanstalk.com
 
 STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
