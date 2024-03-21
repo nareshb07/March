@@ -38,7 +38,7 @@ SITE_ID = 19 # http://naresh.ap-south-1.elasticbeanstalk.com
 STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = []
-# STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
+
 APPEND_SLASH = True
 
 ####################### production purpose only ########################
@@ -235,7 +235,7 @@ DATABASES = {
         'NAME': 'database1',
         'USER': 'Naresh',
         'PASSWORD': 'Naresh1234',
-        'HOST': 'database1.cb28guaiyh8u.ap-south-1.rds.amazonaws.com',
+        'HOST': 'database1.czaym2gywmfy.ap-south-1.rds.amazonaws.com',
         
         'PORT': '5432'
     }
@@ -407,12 +407,12 @@ PAYTM_WEBSITE = 'WEBSTAGING'  # Change it to 'DEFAULT' in production
 ###############################################################
 
 
-
+# source:https://www.youtube.com/watch?v=Ko52pn1KXS0&t=340s&ab_channel=CodeWithMuh
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_ACCESS_KEY_ID = 'AKIAYS2NV7AIVZGQX25K'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'productionone'
+AWS_ACCESS_KEY_ID = 'AKIAVRUVSMX5J6YZ3E7T'
+AWS_SECRET_ACCESS_KEY = '3ae02yVKEDLFquiMoKf+ZWItn63aGiSh1LGEFD5x'
+AWS_STORAGE_BUCKET_NAME = 'productionstaticfiles0'
 AWS_S3_REGION_NAME = 'ap-south-1'  # e.g., 'us-west-2'
 
 
