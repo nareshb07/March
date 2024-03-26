@@ -115,9 +115,9 @@ class PersonalChatConsumer(AsyncWebsocketConsumer):
             
             u.save()
             v.save()
-            print(u,u.last_message)
-            print(v,v.last_message)
+            print("consumer.py(1)",u,u.last_message)
+            print("consumer.py(2)",v,v.last_message)
             
             
         except Exception as e:
-            print(e)
+            print("consumer.py(3)",e)
