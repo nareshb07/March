@@ -30,7 +30,7 @@ DEBUG = True
 
 ####################### production purpose only ########################
 
-ALLOWED_HOSTS = ['15.207.140.217','server-dev2.ap-south-1.elasticbeanstalk.com','172.31.17.162']
+ALLOWED_HOSTS = ['15.207.140.217','13.234.5.105','server-dev2.ap-south-1.elasticbeanstalk.com','172.31.17.162']
 
 
 SITE_ID = 18 # http://naresh.ap-south-1.elasticbeanstalk.com

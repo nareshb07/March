@@ -273,9 +273,9 @@ def creator_profile(request, username):
         
         try:
             user1 = request.user
-            print(user1)
+            print("view.py/creator_profile(1)",user1)
             user2   = creator_obj1
-            print(user2)
+            print("view.py/creator_profile(1)",user2)
             if UserProfile.objects.filter(user = user1, Follower = user2): 
                 userprofile_obj = UserProfile.objects.filter(user = user1, Follower = user2).latest('id')
                 session_status = userprofile_obj.is_session_opened 
@@ -310,7 +310,7 @@ def creator_profile(request, username):
 
     except Exception as e:
         session_status = False
-        print(e)
+        print("view.py/creator_profile(3)",e)
 
     
 from .constants import PaymentStatus
