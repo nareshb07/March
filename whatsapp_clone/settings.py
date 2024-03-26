@@ -30,7 +30,7 @@ DEBUG = True
 
 ####################### production purpose only ########################
 
-ALLOWED_HOSTS = ['15.207.140.217','13.234.5.105','server-dev2.ap-south-1.elasticbeanstalk.com','172.31.17.162']
+ALLOWED_HOSTS = ['server-dev2.ap-south-1.elasticbeanstalk.com']
 
 
 SITE_ID = 18 # http://naresh.ap-south-1.elasticbeanstalk.com
@@ -174,7 +174,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [('aws-my-pnpomlh4xkq2.uyoh6x.0001.aps1.cache.amazonaws.com', 6379)],
+            "hosts": [('redis1.uyoh6x.ng.0001.aps1.cache.amazonaws.com', 6379)],
         },
     },
 }
