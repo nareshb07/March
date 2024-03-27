@@ -30,8 +30,7 @@ DEBUG = True
 
 ####################### production purpose only ########################
 
-ALLOWED_HOSTS = ['server-dev2.ap-south-1.elasticbeanstalk.com']
-
+ALLOWED_HOSTS = ['15.207.140.217','server-dev2.ap-south-1.elasticbeanstalk.com']
 
 SITE_ID = 18 # http://naresh.ap-south-1.elasticbeanstalk.com
 
@@ -170,14 +169,14 @@ ASGI_APPLICATION = 'whatsapp_clone.asgi.application'
 
 
 
-# CHANNEL_LAYERS = {
-#     'default': {
-#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
-#         'CONFIG': {
-#             "hosts": [('127.0.0.1:8000', 6379)],
-#         },
-#     },
-# }
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1:8000', 6379)],
+        },
+    },
+}
 
 # CHANNEL_LAYERS = {
 #     'default': {
