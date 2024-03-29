@@ -5,9 +5,9 @@ branch-defaults:
 global:
   application_name: server
   branch: null
-  default_ec2_keyname: ProductionKeyPair
+  default_ec2_keyname: aws-eb
   default_platform: Python 3.11 running on 64bit Amazon Linux 2023
-  default_region: ap-south-1
+  default_region: us-west-2
   include_git_submodules: true
   instance_profile: null
   platform_name: null
