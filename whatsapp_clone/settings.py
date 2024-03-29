@@ -132,14 +132,14 @@ ASGI_APPLICATION = 'whatsapp_clone.asgi.application'
 
 
 ############## For Local Server #################
-# CHANNEL_LAYERS = {  
-#     "default": {
-#         "BACKEND": "channels_redis.core.RedisChannelLayer",
-#         "CONFIG": {
-#             "hosts": [("127.0.0.1", 6379)],
-#         },
-#     },
-# }
+CHANNEL_LAYERS = {  
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("aws-my-wfnpn8keu128.uyoh6x.0001.aps1.cache.amazonaws.com", 6379)],
+        },
+    },
+}
 
 
 
