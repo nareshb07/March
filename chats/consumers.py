@@ -6,6 +6,7 @@ from .models import User
 from django.utils import timezone
 from channels.layers import get_channel_layer
 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whatsapp_clone.settings')
 
 class PersonalChatConsumer(AsyncWebsocketConsumer):
     async def connect(self):
