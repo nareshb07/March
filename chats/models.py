@@ -6,7 +6,11 @@ from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin, AbstractUser
 from django.utils.translation import gettext_lazy as _
 
+import os
+import django
 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whatsapp_clone.settings')
+django.setup()
 
 
 
