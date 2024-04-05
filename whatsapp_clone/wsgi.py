@@ -17,7 +17,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whatsapp_clone.settings')
 import django
 
 
-django.setup()
-
-
 application = get_wsgi_application()

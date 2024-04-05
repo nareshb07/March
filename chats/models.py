@@ -4,7 +4,7 @@ import datetime
 import os, django
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whatsapp_clone.settings')
-django.setup()
+
 
 from django.utils import timezone
 
