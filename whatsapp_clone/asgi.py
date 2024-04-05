@@ -7,8 +7,11 @@ For more information on this file, see
 https://docs.djangoproject.com/en/3.0/howto/deployment/asgi/
 """
 
-import os
-import django
+import os, django
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whatsapp_clone.settings')
+django.setup()
+
 from django.core.asgi import get_asgi_application
 
 from django.urls import path
@@ -19,8 +22,8 @@ from channels.auth import AuthMiddlewareStack
 
 from chats.consumers import PersonalChatConsumer 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whatsapp_clone.settings')
-django.setup()
+
+
 
 
 application = get_asgi_application()
