@@ -7,9 +7,6 @@ For more information on this file, see
 https://docs.djangoproject.com/en/3.0/howto/deployment/asgi/
 """
 
-import os, django
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whatsapp_clone.settings')
 
 
 from django.core.asgi import get_asgi_application
