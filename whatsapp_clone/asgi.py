@@ -17,9 +17,17 @@ from channels.routing import ProtocolTypeRouter, URLRouter
 
 from channels.auth import AuthMiddlewareStack
 
+
+
+import os
+
+import django
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whatsapp_clone.settings')
+
+django.setup()
+
 from chats.consumers import PersonalChatConsumer 
-
-
 
 
 application = get_asgi_application()

@@ -1,8 +1,8 @@
 import json
 from channels.generic.websocket import AsyncWebsocketConsumer
 from channels.db import database_sync_to_async
-from chats.models import ChatModel, UserProfileModel, ChatNotification, UserProfile
-from .models import User
+from chats.models import ChatModel,UserProfile
+
 from django.utils import timezone
 from channels.layers import get_channel_layer
 
