@@ -26,39 +26,42 @@ SECRET_KEY = 'zl4hyafu=ky(m@r&0pbg7qfsro*@r=2r%-js7y3#pj0g8onwvi'
 
 DEBUG = True
 
+aws_server = True
 # DEBUG = False
 
 ####################### production purpose only ########################
+if aws_server == True:
+    ALLOWED_HOSTS = ['server-dev2.ap-south-1.elasticbeanstalk.com','172.31.27.139','3.109.82.99']
 
-ALLOWED_HOSTS = ['server-dev2.ap-south-1.elasticbeanstalk.com','172.31.27.139','3.109.82.99']
+    SITE_ID = 18 # http://naresh.ap-south-1.elasticbeanstalk.com
 
-SITE_ID = 18 # http://naresh.ap-south-1.elasticbeanstalk.com
+    STATIC_ROOT = 'static'
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = []
 
-STATIC_ROOT = 'static'
-STATIC_URL = '/static/'
-STATICFILES_DIRS = []
+    APPEND_SLASH = True
 
-APPEND_SLASH = True
 
 ####################### production purpose only ########################
 
 
 ####################### Development purpose only ########################
 
-# ALLOWED_HOSTS = ["127.0.0.1"]
+else:
+    ALLOWED_HOSTS = ["127.0.0.1"]
 
-# SITE_ID = 17 # http://127.0.0.1:8000
+    SITE_ID = 17 # http://127.0.0.1:8000
 
-# # SITE_ID = 14
+    # SITE_ID = 14
 
-# STATIC_URL = '/static/'
+    STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-#     # 'content/static',
-# ]
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static'),
+        # 'content/static',
+    ]
 
-# STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
+    STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
 
 
 ####################### Development purpose only ########################
@@ -132,24 +135,26 @@ ASGI_APPLICATION = 'whatsapp_clone.asgi.application'
 
 
 ############## For Local Server #################
-CHANNEL_LAYERS = {  
-    "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("redis.uyoh6x.ng.0001.aps1.cache.amazonaws.com", 6379)],
+
+if aws_server == True:
+    CHANNEL_LAYERS = {  
+        "default": {
+            "BACKEND": "channels_redis.core.RedisChannelLayer",
+            "CONFIG": {
+                "hosts": [("redis.uyoh6x.ng.0001.aps1.cache.amazonaws.com", 6379)],
+            },
         },
-    },
-}
+    }
 
-
-# CHANNEL_LAYERS = {  
-#     "default": {
-#         "BACKEND": "channels_redis.core.RedisChannelLayer",
-#         "CONFIG": {
-#             "hosts": [("127.0.0.1:8000", 6379)],
-#         },
-#     },
-# }
+else :
+    CHANNEL_LAYERS = {  
+        "default": {
+            "BACKEND": "channels_redis.core.RedisChannelLayer",
+            "CONFIG": {
+                "hosts": [("127.0.0.1", 6379)],
+            },
+        },
+    }
 
 
 
