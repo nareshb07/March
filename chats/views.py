@@ -291,7 +291,7 @@ def creator_profile(request, username):
             'payment_capture': '1'  # Auto-capture payments after successful redirection
         })
             # url = "//127.0.0.1:8000"
-            url = "//server-dev22.ap-south-1.elasticbeanstalk.com"
+            url = "//naresh-dev.ap-south-1.elasticbeanstalk.com"
             callback_url = "http://" + url + "/callback/" + str(id) + "/" + str(request.user.id) + "/"
             order_id = response['id']
             print("order_id",order_id)
