@@ -3,14 +3,14 @@
 import os
 import sys
 
-import django
+import dotenv
 
 
 def main():
+
+    dotenv.read_dotenv() # <----------------- here
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whatsapp_clone.settings')
     
-
-    django.setup()
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

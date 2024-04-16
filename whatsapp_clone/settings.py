@@ -32,7 +32,7 @@ aws_server = True
 ####################### production purpose only ########################
 if aws_server == True:
      
-    ALLOWED_HOSTS = ['server-dev22.ap-south-1.elasticbeanstalk.com','172.31.30.133']
+    ALLOWED_HOSTS = ['naresh-dev.ap-south-1.elasticbeanstalk.com']
 
     SITE_ID = 18 # http://naresh.ap-south-1.elasticbeanstalk.com
 
@@ -436,4 +436,3 @@ RAZORPAY_KEY_SECRET = 'cq7X1NctUA5IvNGuMUgMkux2'
 ################################################################
 #############  Razor pay Credentials    ########################
 ################################################################
-
