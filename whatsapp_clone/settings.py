@@ -51,7 +51,7 @@ if aws_server == True:
 else:
     ALLOWED_HOSTS = ["127.0.0.1"]
 
-    SITE_ID = 17 # http://127.0.0.1:8000
+    SITE_ID = 18 # http://127.0.0.1:8000
 
     # SITE_ID = 14
 
