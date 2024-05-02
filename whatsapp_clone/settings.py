@@ -32,7 +32,7 @@ aws_server = True
 ####################### production purpose only ########################
 if aws_server == True:
      
-    ALLOWED_HOSTS = ['http://naresh-dev.ap-south-1.elasticbeanstalk.com']
+    ALLOWED_HOSTS = ['naresh-dev.ap-south-1.elasticbeanstalk.com']
     
 
     SITE_ID = 18 # http://naresh.ap-south-1.elasticbeanstalk.com
