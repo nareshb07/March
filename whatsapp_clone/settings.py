@@ -36,8 +36,8 @@ if aws_server == True:
 
     SITE_ID = 18 # http://naresh.ap-south-1.elasticbeanstalk.com
 
-    # STATIC_ROOT = 'static'
-    STATIC_ROOT = BASE_DIR.joinpath('static')
+    STATIC_ROOT = 'static'
+    # STATIC_ROOT = BASE_DIR.joinpath('static')
     STATIC_URL = '/static/'
     STATICFILES_DIRS = []
 
